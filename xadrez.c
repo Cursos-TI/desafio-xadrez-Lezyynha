@@ -1,32 +1,55 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+int main () {
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    int escolha;
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    printf("** XADREZ **\n"); // cabeçalho
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    printf("Vamos começar! Escolha seu peão:\n");
+    printf("1 - Torre\n2 - Bispo\n3 - Rainha\n");
+    printf("Digite o número da sua escolha: ");
+    scanf("%d", &escolha); 
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    if(escolha == 1){
+        printf("Você está jogando com a Torre!\n");
+        printf("Movimento da torre: \n");
+        //FOR - cinco casas para a direita
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+        int i;
+        for(i = 1; i <=5; i++){
+            printf("Direita\n", i);
+        }
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    } else if(escolha == 2){
+        printf("Você está jogando com o Bispo!\n");
+        printf("Movimento do bispo: \n");
+        //WHILE - cinco casas para cima e direita em diagonal
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+        int i = 1;
+        while (i <= 5)
+        {
+        printf("Cima, direita\n", i);
+        i++;
+        }
+        
+    } else if(escolha == 3){
+        printf("Você está jogando com a Rainha!\n");
+        printf("Movimento da rainha: \n");
+        //DO-WHILE - oito casas para esquerda em todas as direções
+        
+        int i = 1;
+        do
+        {
+        printf("Esquerda\n", i);
+            i++;
+        } while (i <= 8);
+
+    } else {
+        printf("Opção inválida! \n");
+    }
+
+
 
     return 0;
 }

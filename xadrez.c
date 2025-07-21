@@ -7,7 +7,7 @@ int main () {
     printf("** XADREZ **\n"); // cabeçalho
 
     printf("Vamos começar! Escolha seu peão:\n");
-    printf("1 - Torre\n2 - Bispo\n3 - Rainha\n");
+    printf("1 - Torre\n2 - Bispo\n3 - Rainha\n4 - Cavalo\n");
     printf("Digite o número da sua escolha: ");
     scanf("%d", &escolha); 
 
@@ -45,10 +45,25 @@ int main () {
             i++;
         } while (i <= 8);
 
+    } else if (escolha == 4){
+        printf("Você está joganco com o cavalo!\n");
+        printf("Movimento do cavalo: \n");
+
+        for(int i =1; i <= 2; i++){
+            printf("Baixo\n", i);
+        }
+        
+        int j = 1;
+        while(j <= 1){
+            printf("Esquerda\n", j);
+            j++;
+        }
+
     } else {
         printf("Opção inválida! \n");
     }
 
+    
 
 
     return 0;
